@@ -1185,6 +1185,53 @@ body{background:#F4F6FB!important;}
   .feature .head h2{white-space:normal!important;}
 }
 
+
+
+/* ===== GPT update: event period notice ===== */
+.event-period-hero{
+  display:inline-flex;align-items:center;gap:14px;
+  margin:24px 0 0;padding:16px 22px 16px 16px;
+  border-radius:28px;background:rgba(255,255,255,.78);
+  border:1px solid rgba(220,231,255,.92);
+  box-shadow:0 18px 42px rgba(30,66,150,.13);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+  color:#17214A;font-weight:950;letter-spacing:-.025em;
+}
+.event-period-hero .period-icon{
+  width:54px;height:54px;border-radius:20px;
+  display:grid;place-items:center;flex:0 0 auto;
+  background:linear-gradient(135deg,#EEF4FF,#FFFFFF);
+  border:1px solid #DCE7FF;
+  color:#4F83FF;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.72),0 10px 22px rgba(79,131,255,.16);
+}
+.event-period-hero .period-icon svg{width:27px;height:27px;display:block;}
+.event-period-hero .period-date{
+  font-size:clamp(20px,2.2vw,26px);color:#0D1D6E;line-height:1.1;
+}
+.event-period-mid{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  margin:18px auto 0;padding:10px 18px 10px 10px;
+  border-radius:999px;background:#FFFFFF;
+  border:1px solid #CFE0FF;box-shadow:0 12px 26px rgba(30,66,150,.10);
+  color:#30415F;font-weight:850;line-height:1.4;
+}
+.event-period-mid .mid-label{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:34px;padding:0 14px;border-radius:999px;
+  background:linear-gradient(135deg,#2255EE,#4F83FF);
+  color:#fff;font-size:14px;font-weight:950;white-space:nowrap;
+  box-shadow:0 8px 18px rgba(34,85,238,.18);
+}
+.event-period-mid .mid-date{color:#0D1D6E;font-weight:950;}
+@media(max-width:640px){
+  .event-period-hero{border-radius:22px;align-items:center;gap:12px;padding:14px 16px;}
+  .event-period-hero .period-icon{width:48px;height:48px;border-radius:18px;}
+  .event-period-hero .period-date{font-size:18px;}
+  .event-period-mid{border-radius:20px;align-items:flex-start;flex-direction:column;gap:8px;text-align:left;padding:12px 14px;}
+}
+
 </style>
 <style id="event01-image-fix">
 #canvasMission .step-shot.has-img,
@@ -1358,6 +1405,472 @@ main{display:block!important;}
 }
 </style>
 
+
+<style id="gpt-v23-hero-center-period-final">
+/* 요청 반영: 히어로 레이아웃 1안(가운데 정렬) + 기간 UI 소형화 */
+#hero.hero .secbox{
+  grid-template-columns:1fr!important;
+  text-align:center!important;
+  gap:34px!important;
+  min-height:720px!important;
+  padding-top:88px!important;
+  padding-bottom:88px!important;
+}
+#hero.hero .secbox>div:first-child{
+  max-width:960px!important;
+  margin:0 auto!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+}
+#hero.hero h1{
+  text-align:center!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+#hero.hero .copy{
+  text-align:center!important;
+}
+#hero.hero .actions{
+  justify-content:center!important;
+  margin:24px 0 0!important;
+}
+#hero.hero .event-period-hero{
+  order:3!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:8px!important;
+  margin:22px auto 0!important;
+  padding:9px 14px 9px 10px!important;
+  border-radius:999px!important;
+  background:rgba(255,255,255,.82)!important;
+  border:1px solid rgba(220,231,255,.95)!important;
+  box-shadow:0 10px 24px rgba(30,66,150,.09)!important;
+  backdrop-filter:blur(12px)!important;
+  -webkit-backdrop-filter:blur(12px)!important;
+  color:#17214A!important;
+  letter-spacing:-.02em!important;
+}
+#hero.hero .event-period-hero .period-icon{
+  width:32px!important;
+  height:32px!important;
+  border-radius:12px!important;
+  background:#EEF4FF!important;
+  border:1px solid #DCE7FF!important;
+  color:#4F83FF!important;
+  box-shadow:none!important;
+}
+#hero.hero .event-period-hero .period-icon svg{
+  width:17px!important;
+  height:17px!important;
+}
+#hero.hero .event-period-hero .period-label{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-height:28px!important;
+  padding:0 10px!important;
+  border-radius:999px!important;
+  background:linear-gradient(135deg,#2255EE,#4F83FF)!important;
+  color:#fff!important;
+  font-size:13px!important;
+  font-weight:950!important;
+  white-space:nowrap!important;
+  box-shadow:0 6px 14px rgba(34,85,238,.14)!important;
+}
+#hero.hero .event-period-hero .period-date{
+  font-size:16px!important;
+  line-height:1!important;
+  color:#0D1D6E!important;
+  font-weight:950!important;
+  white-space:nowrap!important;
+}
+#hero.hero .visual{
+  width:min(760px,100%)!important;
+  min-height:360px!important;
+  margin:2px auto 0!important;
+}
+#hero.hero .card3d{
+  inset:0 0 auto 0!important;
+  max-width:640px!important;
+  margin:0 auto!important;
+}
+#hero.hero .gift{
+  right:calc(50% - 340px)!important;
+  bottom:4px!important;
+}
+@media(max-width:760px){
+  #hero.hero .event-period-hero{
+    flex-wrap:wrap!important;
+    border-radius:20px!important;
+    padding:10px 12px!important;
+  }
+  #hero.hero .event-period-hero .period-date{font-size:15px!important;}
+  #hero.hero .visual{min-height:330px!important;}
+  #hero.hero .gift{right:0!important;bottom:0!important;}
+}
+</style>
+
+
+<style id="gpt-v24-hero-layout-period-fix">
+/* 요청 반영: 우측 히어로 비주얼은 기존 위치 유지, 좌측 텍스트 영역만 가운데 정렬 */
+#hero.hero .secbox{
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  align-items:center!important;
+  gap:52px!important;
+  text-align:center!important;
+  min-height:680px!important;
+  padding-top:88px!important;
+  padding-bottom:88px!important;
+}
+#hero.hero .secbox>div:first-child{
+  max-width:560px!important;
+  margin:0!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+}
+#hero.hero h1,
+#hero.hero .copy{
+  text-align:center!important;
+}
+#hero.hero .actions{
+  justify-content:center!important;
+  margin:24px 0 0!important;
+}
+#hero.hero .visual{
+  display:block!important;
+  position:relative!important;
+  width:auto!important;
+  min-height:500px!important;
+  margin:0!important;
+}
+#hero.hero .card3d{
+  position:absolute!important;
+  inset:36px 0 auto 38px!important;
+  max-width:none!important;
+  margin:0!important;
+}
+#hero.hero .gift{
+  right:18px!important;
+  bottom:42px!important;
+}
+
+/* 기간 UI: 아이콘 제거, 하나의 컴팩트한 정보 필로 정리 */
+#hero.hero .event-period-hero{
+  order:3!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:10px!important;
+  margin:22px auto 0!important;
+  min-height:48px!important;
+  padding:8px 16px 8px 10px!important;
+  border-radius:999px!important;
+  background:rgba(255,255,255,.86)!important;
+  border:1px solid rgba(220,231,255,.98)!important;
+  box-shadow:0 10px 24px rgba(30,66,150,.09)!important;
+  backdrop-filter:blur(12px)!important;
+  -webkit-backdrop-filter:blur(12px)!important;
+  color:#17214A!important;
+  letter-spacing:-.02em!important;
+}
+#hero.hero .event-period-hero .period-icon{
+  display:none!important;
+}
+#hero.hero .event-period-hero .period-label{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-height:30px!important;
+  padding:0 12px!important;
+  border-radius:999px!important;
+  background:#EEF4FF!important;
+  border:1px solid #DCE7FF!important;
+  color:#2255EE!important;
+  font-size:13px!important;
+  line-height:1!important;
+  font-weight:950!important;
+  white-space:nowrap!important;
+  box-shadow:none!important;
+}
+#hero.hero .event-period-hero .period-date{
+  font-size:16px!important;
+  line-height:1!important;
+  color:#0D1D6E!important;
+  font-weight:950!important;
+  white-space:nowrap!important;
+}
+@media(max-width:900px){
+  #hero.hero .secbox{
+    grid-template-columns:1fr!important;
+    text-align:center!important;
+  }
+  #hero.hero .secbox>div:first-child{
+    max-width:100%!important;
+    margin:0 auto!important;
+  }
+  #hero.hero .visual{
+    min-height:430px!important;
+  }
+  #hero.hero .card3d{
+    inset:0 0 auto 0!important;
+  }
+  #hero.hero .gift{
+    right:0!important;
+    bottom:0!important;
+  }
+}
+@media(max-width:560px){
+  #hero.hero .event-period-hero{
+    flex-wrap:wrap!important;
+    border-radius:20px!important;
+    padding:10px 12px!important;
+  }
+  #hero.hero .event-period-hero .period-date{
+    font-size:15px!important;
+  }
+}
+</style>
+
+
+
+<style id="gpt-v25-hero-prize-period-refinement">
+/* v25 요청 반영: 히어로 버튼 단일화, 기간 UI 정리, 이벤트 상단 기간 제거, 경품 영역 기간 추가 */
+#hero.hero .secbox{
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  align-items:center!important;
+  gap:52px!important;
+  text-align:center!important;
+}
+#hero.hero .secbox>div:first-child{
+  max-width:560px!important;
+  margin:0!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+}
+#hero.hero h1,
+#hero.hero .copy{
+  text-align:center!important;
+}
+#hero.hero .hero-single-action{
+  order:2!important;
+  justify-content:center!important;
+  margin:28px 0 0!important;
+  width:100%!important;
+}
+#hero.hero .hero-main-btn{
+  position:relative!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:8px!important;
+  min-height:52px!important;
+  padding:0 28px!important;
+  border-radius:999px!important;
+  background:linear-gradient(135deg,#2255EE,#684CFF)!important;
+  color:#fff!important;
+  border:1px solid rgba(255,255,255,.42)!important;
+  box-shadow:0 16px 30px rgba(34,85,238,.22)!important;
+  font-size:16px!important;
+  font-weight:950!important;
+  letter-spacing:-.025em!important;
+}
+#hero.hero .hero-main-btn:hover{
+  transform:translateY(-2px)!important;
+  box-shadow:0 20px 34px rgba(34,85,238,.28)!important;
+}
+#hero.hero .hero-main-btn span{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  width:22px!important;
+  height:22px!important;
+  border-radius:999px!important;
+  background:rgba(255,255,255,.18)!important;
+  font-size:15px!important;
+  line-height:1!important;
+}
+#hero.hero .event-period-hero{
+  order:3!important;
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:8px!important;
+  margin:16px auto 0!important;
+  min-height:40px!important;
+  padding:5px 14px 5px 6px!important;
+  border-radius:999px!important;
+  background:rgba(255,255,255,.78)!important;
+  border:1px solid rgba(220,231,255,.95)!important;
+  box-shadow:0 8px 20px rgba(30,66,150,.07)!important;
+  backdrop-filter:blur(12px)!important;
+  -webkit-backdrop-filter:blur(12px)!important;
+}
+#hero.hero .event-period-hero .period-icon{display:none!important;}
+#hero.hero .event-period-hero .period-label{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-height:28px!important;
+  padding:0 11px!important;
+  border-radius:999px!important;
+  background:linear-gradient(135deg,#EEF4FF,#FFFFFF)!important;
+  border:1px solid #DCE7FF!important;
+  color:#2255EE!important;
+  font-size:12px!important;
+  line-height:1!important;
+  font-weight:950!important;
+  white-space:nowrap!important;
+  box-shadow:none!important;
+}
+#hero.hero .event-period-hero .period-date{
+  font-size:14px!important;
+  line-height:1!important;
+  color:#0D1D6E!important;
+  font-weight:950!important;
+  white-space:nowrap!important;
+}
+#hero.hero .visual{
+  display:block!important;
+  position:relative!important;
+  width:auto!important;
+  min-height:500px!important;
+  margin:0!important;
+}
+#hero.hero .card3d{
+  position:absolute!important;
+  inset:36px 0 auto 38px!important;
+  max-width:none!important;
+  margin:0!important;
+}
+#hero.hero .gift{
+  right:18px!important;
+  bottom:42px!important;
+}
+/* 이벤트 참여 방법 제목 하단 기간 UI는 제거 */
+.event-revised .head .event-period-mid{display:none!important;}
+/* 경품 섹션 제목 하단 기간 UI */
+.prize-period-ui{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:10px!important;
+  margin:18px auto 0!important;
+  padding:7px 16px 7px 8px!important;
+  border-radius:999px!important;
+  background:rgba(255,255,255,.78)!important;
+  border:1px solid rgba(220,231,255,.98)!important;
+  box-shadow:0 12px 26px rgba(30,66,150,.10)!important;
+  color:#0D1D6E!important;
+}
+.prize-period-ui span{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-height:30px!important;
+  padding:0 13px!important;
+  border-radius:999px!important;
+  background:linear-gradient(135deg,#2255EE,#4F83FF)!important;
+  color:#fff!important;
+  font-size:13px!important;
+  line-height:1!important;
+  font-weight:950!important;
+  white-space:nowrap!important;
+  box-shadow:0 6px 14px rgba(34,85,238,.16)!important;
+}
+.prize-period-ui strong{
+  color:#0D1D6E!important;
+  font-size:16px!important;
+  line-height:1!important;
+  font-weight:950!important;
+  white-space:nowrap!important;
+}
+@media(max-width:900px){
+  #hero.hero .secbox{grid-template-columns:1fr!important;text-align:center!important;}
+  #hero.hero .secbox>div:first-child{max-width:100%!important;margin:0 auto!important;}
+  #hero.hero .visual{min-height:430px!important;}
+  #hero.hero .card3d{inset:0 0 auto 0!important;}
+  #hero.hero .gift{right:0!important;bottom:0!important;}
+}
+@media(max-width:560px){
+  #hero.hero .hero-main-btn{width:100%!important;}
+  #hero.hero .event-period-hero,
+  .prize-period-ui{flex-wrap:wrap!important;border-radius:20px!important;padding:9px 12px!important;}
+  #hero.hero .event-period-hero .period-date,
+  .prize-period-ui strong{font-size:14px!important;}
+}
+</style>
+
+
+<style id="gpt-v26-requested-cleanup">
+/* 요청 반영: 히어로 영역 버튼/후기 선물 UI 삭제, 이벤트 기간 UI 가독성 확대 */
+#hero.hero .hero-single-action,
+#hero.hero .hero-main-btn,
+#hero.hero .gift{
+  display:none!important;
+}
+
+#hero.hero .event-period-hero{
+  margin-top:26px!important;
+  min-height:58px!important;
+  gap:12px!important;
+  padding:10px 20px 10px 12px!important;
+  border-radius:999px!important;
+}
+
+#hero.hero .event-period-hero .period-label{
+  min-height:38px!important;
+  padding:0 16px!important;
+  font-size:16px!important;
+  font-weight:950!important;
+}
+
+#hero.hero .event-period-hero .period-date{
+  font-size:20px!important;
+  line-height:1.05!important;
+  font-weight:950!important;
+}
+
+.prize-period-ui{
+  min-height:58px!important;
+  gap:12px!important;
+  padding:10px 20px 10px 12px!important;
+}
+
+.prize-period-ui span{
+  min-height:38px!important;
+  padding:0 16px!important;
+  font-size:16px!important;
+}
+
+.prize-period-ui strong{
+  font-size:20px!important;
+  line-height:1.05!important;
+}
+
+@media(max-width:560px){
+  #hero.hero .event-period-hero,
+  .prize-period-ui{
+    border-radius:22px!important;
+    padding:12px 14px!important;
+  }
+  #hero.hero .event-period-hero .period-label,
+  .prize-period-ui span{
+    font-size:14px!important;
+    min-height:34px!important;
+  }
+  #hero.hero .event-period-hero .period-date,
+  .prize-period-ui strong{
+    font-size:17px!important;
+  }
+}
+</style>
+
 </head>
 <body><div class="wrap">
 <aside aria-label="이벤트 빠른 이동" class="quick-nav">
@@ -1369,7 +1882,7 @@ main{display:block!important;}
 <a class="quick-top" href="#hero">TOP</a>
 </aside>
 <main>
-<section class="hero" id="hero"><div class="secbox"><div><h1>매쓰캔버스 <span class="grad">챌린지</span></h1><p class="copy">새로운 기능을 직접 써보고<br/>생생한 후기를 남기면 선물이 팡팡! 🎊</p><div class="actions"><a class="btn pri" href="#event">챌린지 참여하러 가기</a><a class="btn sec" href="https://dev.mathcanvas.co.kr/ko" target="_blank">매쓰캔버스 바로 가기</a></div></div><div class="visual"><div class="card3d"><div class="mock"><span class="chip" style="left:18px;top:18px">🧩 2D 교구</span><span class="chip" style="right:18px;top:18px">🔷 3D 교구</span><div class="s s1"></div><div class="s s2"></div><div class="s s3"></div><div class="s grid"></div></div></div><div class="gift"><strong>후기 남기고<br/>선물 받기 🎉</strong><span>수업 장면, 활용 모습, 업로드 링크를 제출하면 참여 완료!</span></div></div></div></section>
+<section class="hero" id="hero"><div class="secbox"><div><h1>매쓰캔버스 <span class="grad">챌린지</span></h1><p class="copy">새로운 기능을 직접 써보고<br/>생생한 후기를 남기면 선물이 팡팡! 🎊</p><div class="event-period-hero" aria-label="이벤트 기간 6월 15일 월요일부터 7월 10일 금요일까지"><span class="period-label">이벤트 기간</span><strong class="period-date">6월 15일(월) ~ 7월 10일(금)</strong></div></div><div class="visual"><div class="card3d"><div class="mock"><span class="chip" style="left:18px;top:18px">🧩 2D 교구</span><span class="chip" style="right:18px;top:18px">🔷 3D 교구</span><div class="s s1"></div><div class="s s2"></div><div class="s s3"></div><div class="s grid"></div></div></div></div></div></section>
 <section class="event-revised" id="event">
 <div class="secbox">
 <div class="head">
@@ -1440,6 +1953,7 @@ main{display:block!important;}
 <section class="prize-section prize-application" id="prizes">
 <div class="prize-title">
 <h3>미션을 완료하고 참여 폼을 제출하면 경품 응모 완료 <span class="plain-emoji">🎉</span></h3>
+<p class="prize-period-ui"><span>이벤트 기간</span><strong>6/15(월) ~ 7/10(금)</strong></p>
 </div>
 <div class="prize-benefit-grid">
 <article class="benefit-card primary">
@@ -1471,10 +1985,10 @@ main{display:block!important;}
 function tabs(sel,panel){document.querySelectorAll(sel).forEach(b=>b.onclick=()=>{const key=b.dataset.tab||b.dataset.feature;b.parentElement.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.querySelectorAll(panel).forEach(p=>p.classList.remove('on'));document.getElementById(key).classList.add('on')})}tabs('.tab','.panel');tabs('.ftab','.fpanel');
 const reviews=[
   {name:'초등학교 교사 – 황OO', text:'학생들이 로그인 하지 않고 바로 공유할 수 있게 QR코드가 만들어지는 것 정말 편리합니다.'},
-  {name:'초등학교 교사 – 이OO 선생님', text:'화면 녹화기능을 통해 학생이 어떤 과정으로 답을 도출하였는지 교사가 확인하고, 이를 제출받을 수 있는 부분이 좋았습니다.'},
+  {name:'초등학교 교사 – 이OO', text:'화면 녹화기능을 통해 학생이 어떤 과정으로 답을 도출하였는지 교사가 확인하고, 이를 제출받을 수 있는 부분이 좋았습니다.'},
   {name:'초등학교 교사 – 김OO', text:'결과물 제출에 그치지 않고 재생 기능을 통해 학생의 해결 과정을 복기할 수 있는 환경을 만들어 놓은 점이 매우 매력적입니다.'},
   {name:'초등학교 교사 – 김OO', text:'이번에 개편된 화면은 사용자 중심이라 조금 더 집중해서 활용할 수 있을 거라 기대됩니다.'},
-  {name:'중학교 교사 – 양OO 선생님', text:'화면 배율을 20%~180%까지 조절 가능해져 다양한 예시들을 한 캔버스에 담아낼 수 있기에 비교하면서 수업하기에도 좋아 보입니다.'},
+  {name:'중학교 교사 – 양OO', text:'화면 배율을 20%~180%까지 조절 가능해져 다양한 예시들을 한 캔버스에 담아낼 수 있기에 비교하면서 수업하기에도 좋아 보입니다.'},
   {name:'일반 사용자 – 송OO', text:'서비스의 완성도가 눈에 띄게 향상되었습니다. 특히 도구의 호환성 확대와 예시 자료 제공이 활용도를 높여줍니다.'},
   {name:'중학교 교사 – 김OO', text:'도구 어시스트 기능은 도구마다 별다른 검색 없이 관련된 템플릿이 추천된다는 점이 편리했으며, 템플릿을 활용해 보면서 수업 설계에 대한 새로운 관점을 발견할 수 있었습니다.'},
   {name:'초등학교 교사 – 장OO', text:'학습 리포트가 업데이트되면서 학습한 슬라이드, 학습 시간이 나오게 되어 자율 학습시 활용 가능, 수업 내 함께 사용 시 느린 학습자와 빠른 학습자의 판단이 가능해졌습니다.'},
