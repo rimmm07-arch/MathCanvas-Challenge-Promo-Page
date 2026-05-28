@@ -1470,10 +1470,10 @@ main{display:block!important;}
 <script>
 function tabs(sel,panel){document.querySelectorAll(sel).forEach(b=>b.onclick=()=>{const key=b.dataset.tab||b.dataset.feature;b.parentElement.querySelectorAll('button').forEach(x=>x.classList.remove('on'));b.classList.add('on');document.querySelectorAll(panel).forEach(p=>p.classList.remove('on'));document.getElementById(key).classList.add('on')})}tabs('.tab','.panel');tabs('.ftab','.fpanel');
 const reviews=[
-  {name:'초등학교 교사 – 황OO 선생님', text:'학생들이 로그인 하지 않고 바로 공유할 수 있게 QR코드가 만들어지는 것 정말 편리합니다.'},
+  {name:'초등학교 교사 – 황OO', text:'학생들이 로그인 하지 않고 바로 공유할 수 있게 QR코드가 만들어지는 것 정말 편리합니다.'},
   {name:'초등학교 교사 – 이OO 선생님', text:'화면 녹화기능을 통해 학생이 어떤 과정으로 답을 도출하였는지 교사가 확인하고, 이를 제출받을 수 있는 부분이 좋았습니다.'},
-  {name:'초등학교 교사 – 김OO 선생님', text:'결과물 제출에 그치지 않고 재생 기능을 통해 학생의 해결 과정을 복기할 수 있는 환경을 만들어 놓은 점이 매우 매력적입니다.'},
-  {name:'초등학교 교사 – 김OO 선생님', text:'이번에 개편된 화면은 사용자 중심이라 조금 더 집중해서 활용할 수 있을 거라 기대됩니다.'},
+  {name:'초등학교 교사 – 김OO', text:'결과물 제출에 그치지 않고 재생 기능을 통해 학생의 해결 과정을 복기할 수 있는 환경을 만들어 놓은 점이 매우 매력적입니다.'},
+  {name:'초등학교 교사 – 김OO', text:'이번에 개편된 화면은 사용자 중심이라 조금 더 집중해서 활용할 수 있을 거라 기대됩니다.'},
   {name:'중학교 교사 – 양OO 선생님', text:'화면 배율을 20%~180%까지 조절 가능해져 다양한 예시들을 한 캔버스에 담아낼 수 있기에 비교하면서 수업하기에도 좋아 보입니다.'},
   {name:'일반 사용자 – 송OO', text:'서비스의 완성도가 눈에 띄게 향상되었습니다. 특히 도구의 호환성 확대와 예시 자료 제공이 활용도를 높여줍니다.'},
   {name:'중학교 교사 – 김OO', text:'도구 어시스트 기능은 도구마다 별다른 검색 없이 관련된 템플릿이 추천된다는 점이 편리했으며, 템플릿을 활용해 보면서 수업 설계에 대한 새로운 관점을 발견할 수 있었습니다.'},
